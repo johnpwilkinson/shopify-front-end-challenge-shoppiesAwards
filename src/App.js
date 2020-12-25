@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Search from "./components/Search";
+import Nav from "./components/Nav";
+import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
+import MyNoms from './components/MyNoms'
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 function App() {
+
+  let query = useQuery()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Nav /> */}
+      <Switch>
+        <Route path="/summary/">
+          <Nav />
+          <MyNoms name={query.get('query')} />
+        </Route>
+        <Route exact path="/">
+          <Nav />
+          <Search />
+        </Route>
+      </Switch>
+      {/* <Search /> */}
     </div>
   );
 }
