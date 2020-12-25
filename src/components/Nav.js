@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import {Link} from 'react-router-dom'
 
 function Nav(props) {

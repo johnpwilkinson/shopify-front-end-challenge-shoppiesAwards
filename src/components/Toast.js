@@ -1,29 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
-import {
-  Row,
-  Col,
-  Toast,
-  Button,
-  InputGroup,
-  FormControl,
-} from "react-bootstrap";
+import { Toast, Button, InputGroup, FormControl } from "react-bootstrap";
 
 function ToastPop(props) {
-  //   const [showA, setShowA] = useState(true);
-  //   const [showB, setShowB] = useState(true);
-
-  //   const toggleShowA = () => setShowA(!showA);
-  //   const toggleShowB = () => setShowB(!showB);
-  // onClose={props.closeToast}
-
   return (
-    // <div
-    //   style={{
-    //     position: "relative",
-    //     minHeight: "200px",
-    //   }}
-    // >
     <Toast
       aria-live="polite"
       aria-atomic="true"

@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, ListGroup, Button, Row, Col } from "react-bootstrap";
-import Toast from "./Toast";
-import { InfoCircleFill, Info } from "react-bootstrap-icons";
+import { InfoCircleFill } from "react-bootstrap-icons";
 import DetailModal from "./DetailModal";
 
 function Suggestions(props) {

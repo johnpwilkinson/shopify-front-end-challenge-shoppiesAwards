@@ -3,7 +3,7 @@ import axios from "axios";
 import Suggestions from "./Suggestions";
 import Nominations from "./Nominations";
 import uuid from "react-uuid";
-import { Toast, Container, Jumbotron, Form, Row, Col } from "react-bootstrap";
+import { Container, Jumbotron, Form, Row, Col } from "react-bootstrap";
 import ToastPop from "./Toast";
 import HelpModal from "./HelpModal";
 import { withRouter, Redirect } from "react-router-dom";
@@ -211,7 +211,6 @@ class Search extends Component {
         <Row>
           <Container fluid>
             <Jumbotron>
-              {/* <h1 className="shopifyFont">Nominate a movie</h1> */}
               <Row className="d-flex justify-content-between">
                 <Col>
                   <div className="logo-font">

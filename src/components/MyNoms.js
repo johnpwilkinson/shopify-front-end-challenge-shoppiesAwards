@@ -8,8 +8,6 @@ import {
   Table,
   Image,
 } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, useLocation } from "react-router-dom";
-import { getDetails, hello } from "./helpers";
 import axios from "axios";
 import DetailRow from "./DetailRow";
 import Share from "./Share";

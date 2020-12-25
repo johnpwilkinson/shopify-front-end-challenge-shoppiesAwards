@@ -1,5 +1,4 @@
 import React from "react";
-import { Navbar, ListGroup, Row, Col, Button, Table } from "react-bootstrap";
 
 function DetailRow(props) {
   return (

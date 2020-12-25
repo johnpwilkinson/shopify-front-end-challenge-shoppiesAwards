@@ -1,7 +1,7 @@
 import "./App.css";
 import Search from "./components/Search";
 import Nav from "./components/Nav";
-import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import MyNoms from './components/MyNoms'
 
 function useQuery() {
