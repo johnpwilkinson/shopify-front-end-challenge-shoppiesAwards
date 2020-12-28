@@ -1,4 +1,4 @@
-/* .App {
+/* /* .App {
   text-align: center;
 }
 
@@ -37,8 +37,9 @@
   }
 } */
 @font-face {
-  font-family: 'myriad-pro-italic';
-  src: local('myriad-pro-italic'), url(./fonts/myriad-pro-italic.otf) format('opentype');
+  font-family: "myriad-pro-italic";
+  src: local("myriad-pro-italic"),
+    url(./fonts/myriad-pro-italic.otf) format("opentype");
 }
 /* .listy {
 margin: 10px, 0px !important;
@@ -56,16 +57,15 @@ background-color: blue;
 .shopifyDetailFont {
   font-family: myriad-pro-italic;
   font-size: 1rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .shopifyFont {
   font-family: myriad-pro-italic;
   color: #024c3e;
-
 }
 .detCat {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .sub-size {
@@ -96,7 +96,7 @@ background-color: blue;
   padding: 0 1.75%;
 }
 .status {
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   background-color: #faf7ed !important;
 }
 .nomDetWrapper {
@@ -130,26 +130,24 @@ background-color: blue;
 .suggestionsList {
   max-height: 300px;
   margin-bottom: 100px;
-  overflow:scroll;
+  overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
 .centerTxt {
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 #root {
   background-color: #024c3e;
   min-height: 100vh;
-  height: 100%
-  ;
+  height: 100%;
 }
 
 html {
-    background-color: #024c3e;
-    min-height: 100vh;
-    height: 100%
-    ;
+  background-color: #024c3e;
+  min-height: 100vh;
+  height: 100%;
 }
 /* .colDet {
   margin-left: 55%;
@@ -166,7 +164,6 @@ body {
   background-color: #024c3e !important;
   border-color: #024c3e !important;
   margin: 2% !important;
-
 }
 
 p {
@@ -178,9 +175,8 @@ p {
   font-size: 2rem;
   font-weight: bold;
   font-family: myriad-pro-italic;
-  color:  #024c3e;
+  color: #024c3e;
   background-color: #faf7ed !important;
-
 }
 
 .toastText {
@@ -189,8 +185,8 @@ p {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -200,7 +196,7 @@ p {
 
 body.modal-open {
   overflow: hidden !important;
-  position:fixed;
+  position: fixed;
   width: 100%;
   height: 100%;
 }
@@ -228,3 +224,42 @@ body.modal-open {
 .fa-copy {
   color: white;
 }
+/* .magictime {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+} */
+
+.reel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.fadez-in{ 
+  animation: fadeInAnimation ease 4s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
+} 
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+  } 
+} 
+
+.fadez-out{ 
+  animation: fadeOutAnimation ease 5s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode:backwards; 
+} 
+@keyframes fadeOutAnimation { 
+  0% { 
+      opacity: 1; 
+  } 
+  100% { 
+      opacity: 0; 
+  } 
+} 

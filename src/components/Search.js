@@ -8,6 +8,8 @@ import ToastPop from "./Toast";
 import HelpModal from "./HelpModal";
 import { withRouter, Redirect } from "react-router-dom";
 // import { OMDB_URL, OMDB_KEY } from "./utils/urls";
+// import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import Loading from './Loading'
 
 class Search extends Component {
   state = {
@@ -24,6 +26,7 @@ class Search extends Component {
     name: "",
     redirect: false,
     goto: "",
+    isLoading: true,
     // showFullToast: [false,
   };
 
@@ -34,6 +37,7 @@ class Search extends Component {
   //     }
   //   }
   componentDidMount() {
+    setTimeout(() => this.setState({ isLoading: false }), 5000);
     const nominations = localStorage.getItem("nominations");
     if (nominations) this.setState({ nominations: JSON.parse(nominations) });
   }
@@ -205,11 +209,15 @@ class Search extends Component {
     if (this.state.redirect === true) {
       return <Redirect to={this.state.goto} />;
     }
-
+    if (this.state.isLoading) {
+      return (
+        <Loading className="reel"/>
+      );
+    }
     return (
-      <Container fluid>
+      <Container fluid className="fadez-in" >
         <Row>
-          <Container fluid>
+          <Container fluid >
             <Jumbotron>
               <Row className="d-flex justify-content-between">
                 <Col>

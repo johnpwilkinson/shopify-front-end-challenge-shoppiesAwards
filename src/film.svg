@@ -1,0 +1,53 @@
+<svg width="100px" height="auto" viewBox="0 0 53 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<linearGradient id="gradient" x1="100%" y1="0%" x2="0%" y2="0%">
+		  <stop offset="6.25%" style="stop-color:#87FFFE;"/>
+		  <stop offset="18.75%" style="stop-color:#88FF89;"/>
+		  <stop offset="31.25%" style="stop-color:#F8F58A;"/>
+		  <stop offset="43.75%" style="stop-color:#EF696A;"/>
+		  <stop offset="56.25%" style="stop-color:#F36ABA;"/>
+		  <stop offset="68.75%" style="stop-color:#EF696A;"/>
+		  <stop offset="81.25%" style="stop-color:#F8F58A;"/>
+		  <stop offset="93.75%" style="stop-color:#88FF89;"/>
+		  <stop offset="100%" style="stop-color:#87FFFE;"/>
+		</linearGradient>
+	</defs>
+
+	<pattern id="pattern" x="0" y="0" width="400%" height="100%" patternUnits="userSpaceOnUse">
+	  <rect x="-150%" y="0" width="200%" height="100%" fill="url(#gradient)" transform="rotate(-65)">
+		<animate attributeType="XML"
+				 attributeName="x"
+				 from="-150%" to="50%"
+				 dur="6s"
+				 repeatCount="indefinite"/>
+	  </rect>
+	  <rect x="-350%" y="0" width="200%" height="100%" fill="url(#gradient)" transform="rotate(-65)">
+		<animate attributeType="XML"
+				 attributeName="x"
+				 from="-350%" to="-150%"
+				 dur="6s"
+				 repeatCount="indefinite"/>
+	  </rect>
+	</pattern>
+
+	<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		
+		<g id="junglebug">
+			<g id="Fill-1-Clipped">
+				<mask id="mask-2" fill="white">
+					<use xlink:href="#path-1"></use>
+				</mask>
+				<g id="path-1"></g>
+				<path d="m36.8 199.2c8 4.6 26.9 8.8 46.3 8.8 43.1 0 69.4-17.4 69.4-39.8 0-15.9-13.1-26-36.9-34.4-20-7.5-29.7-13.4-29.7-23.9 0-10.5 14.3-21 38-21 15.4-0.2 27.4 3.6 33.4 5.9l8.6-12.8c-6.9-3.1-20.9-6.9-39.4-6.9-35.4 0-65.1 14.9-65.1 37.9 0 14 13.7 24.3 38.3 33.1 20 7.5 28.3 14.5 28.3 24.1 0 15.7-20 24.3-41.7 24.3-16 0-30.6-3.4-40.9-8.2z" id="Fill-1" fill="url(#pattern)" fill-rule="nonzero"></path>
+			</g>
+		</g>
+	</g>
+</svg>
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 297" height="297" width="210">
+	<defs>
+	   <rect height="96.8" width="116.4" y="99" x="51.4" />
+	</defs>
+	<path d="m36.8 199.2c8 4.6 26.9 8.8 46.3 8.8 43.1 0 69.4-17.4 69.4-39.8 0-15.9-13.1-26-36.9-34.4-20-7.5-29.7-13.4-29.7-23.9 0-10.5 14.3-21 38-21 15.4-0.2 27.4 3.6 33.4 5.9l8.6-12.8c-6.9-3.1-20.9-6.9-39.4-6.9-35.4 0-65.1 14.9-65.1 37.9 0 14 13.7 24.3 38.3 33.1 20 7.5 28.3 14.5 28.3 24.1 0 15.7-20 24.3-41.7 24.3-16 0-30.6-3.4-40.9-8.2z" style="-inkscape-font-specification:'Myriad Pro Italic';font-family:'Myriad Pro';font-size:10px;font-style:italic;line-height:1;stroke-width:20;white-space:pre" />
+ </svg> -->
