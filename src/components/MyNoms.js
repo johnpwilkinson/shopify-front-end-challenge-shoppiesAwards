@@ -84,7 +84,7 @@ class MyNoms extends Component {
           <title>{name}'s Shoppiy Nominations</title>
           <link rel="canonical" href={this.state.url} />
           <meta property="og:url" content={this.state.url} />
-          <meta property="og:type" content="article" />
+          <meta property="og:type" content="website" />
           <meta
             property="og:title"
             content="When Great Minds Don’t Think Alike"
