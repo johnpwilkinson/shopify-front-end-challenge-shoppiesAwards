@@ -1,7 +1,8 @@
 import React from "react";
-import { Navbar, ListGroup, Button, Row, Col } from "react-bootstrap";
+import { Navbar, ListGroup, Row, Col } from "react-bootstrap";
 import { InfoCircleFill } from "react-bootstrap-icons";
 import DetailModal from "./DetailModal";
+import AwesomeButton from "./AwesomeButton";
 
 function Suggestions(props) {
   const noms = props.nominations.map((movie) => movie.title);
@@ -21,7 +22,7 @@ function Suggestions(props) {
                 {/* {console.log(movie.imdbID)} */}
                 <p className="shopifyDetailFont">
                   {movie.Title} - {movie.Year}{" "}
-                  <span onClick={() => props.getDetails(movie.imdbID)}>
+                  <span onClick={() => props.getDetails(movie.imdbID)} className="pointer">
                     <small>
                       <InfoCircleFill />
                     </small>
@@ -30,25 +31,28 @@ function Suggestions(props) {
               </Col>
               <Col sm={3}>
                 {noms.indexOf(movie.Title) > -1 ? (
-                  <div className="d-flex flex-row-reverse">
-                    <Button
-                      disabled
+                  <div className="d-flex flex-row-reverse shopifyDetailFont">
+                    <AwesomeButton
+                      color={"red"}
+                      isDisabled={true}
+                      content={"Nominate"}
                       onClick={() => {
                         props.nominate(movie.Title, movie.Year, movie.imdbID);
                       }}
-                    >
-                      Nominate
-                    </Button>
+                    ></AwesomeButton>
                   </div>
                 ) : (
-                  <div className="d-flex flex-row-reverse">
-                    <Button
-                      onClick={() => {
-                        props.nominate(movie.Title, movie.Year, movie.imdbID);
-                      }}
-                    >
-                      Nominate
-                    </Button>
+                  <div className="d-flex flex-row-reverse shopifyDetailFont">
+                    <AwesomeButton
+                      className="button-1-14"
+                      color={"green"}
+                      isDisabled={false}
+                      action={props.nominate}
+                      title={movie.Title}
+                      year={movie.Year}
+                      imdb={movie.imdbID}
+                      content={"Nominate"}
+                    ></AwesomeButton>
                   </div>
                 )}
               </Col>

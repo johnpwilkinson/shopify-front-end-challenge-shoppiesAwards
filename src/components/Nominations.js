@@ -1,6 +1,6 @@
 import React from "react";
-import { Navbar, ListGroup, Row, Col, Button } from "react-bootstrap";
-
+import { Navbar, ListGroup, Row, Col } from "react-bootstrap";
+import AwesomeButton from "./AwesomeButton";
 function Nominations(props) {
   return (
     <div>
@@ -13,24 +13,23 @@ function Nominations(props) {
       <div>
         {props.nominations.length > 0 ? (
           props.nominations.map((movie) => (
-            
             <ListGroup className="suggestionsList status listy">
               <Row key={movie.id} className="detail light-color-bg">
                 <Col>
-                {console.log(movie)}
+                  {console.log(movie)}
                   <p className="shopifyDetailFont">
                     {movie.title} - {movie.year}{" "}
                   </p>
                 </Col>
                 <Col sm={3}>
-                  <div className="d-flex flex-row-reverse">
-                    <Button
-                      onClick={() => {
-                        props.delNomination(movie.id);
-                      }}
+                  <div className="d-flex flex-row-reverse shopifyDetailFont">
+                    <AwesomeButton
+                      className="button-1-14"
+                      movie={movie.id}
+                      action={props.delNomination}
+                      content={"Remove"}
                     >
-                      Remove
-                    </Button>
+                    </AwesomeButton>
                   </div>
                 </Col>
               </Row>

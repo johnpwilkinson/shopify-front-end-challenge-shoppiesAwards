@@ -1,6 +1,5 @@
 import React from "react";
 import { Modal, Button, Row, Col } from "react-bootstrap";
-
 function HelpModal(props) {
   return (
     <Modal
@@ -10,13 +9,13 @@ function HelpModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header closeButton className="modalHeaderFooter">
         <Modal.Title id="contained-modal-title-vcenter">
           <strong className="mr-auto toastTop">Help</strong>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4 className="toastTop">Shoppie Awards App</h4>
+        <h4 className="toastTop modalBodyTitle">Shoppie Awards App</h4>
         <Row className="ml-1">
             <Col sm={1} className="icon">
                 🎬
@@ -41,9 +40,17 @@ function HelpModal(props) {
                 Click the REMOVE button to remove a movie to your nominations list
             </Col>
         </Row>
+        <Row className="ml-1">
+            <Col sm={1} className="icon">
+            💾
+            </Col>
+            <Col sm={11} className="align-self-end">
+                Click SAVE YOUR NOMINATIONS to generate a shareable link to your nominations
+            </Col>
+        </Row>
         
       </Modal.Body>
-      <Modal.Footer>
+      <Modal.Footer className="modalHeaderFooter">
         <Button onClick={props.toggleModal}>Close</Button>
       </Modal.Footer>
     </Modal>

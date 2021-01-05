@@ -77,7 +77,7 @@ function DetailModal(props) {
                 href={`https://www.imdb.com/title/${props.movieDetail.imdbid}/`}
                 target="blank"
               >
-                Click here to get more info {props.movieDetail.title}
+                Click here to get more info about {props.movieDetail.title}
               </a>
             </Row>
           </Col>

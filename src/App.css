@@ -107,6 +107,8 @@ background-color: blue;
   font-size: 2em;
   color: #faf7ed;
   font-weight: bold;
+  text-decoration: none !important;
+
 }
 .help-font {
   font-family: myriad-pro-italic;
@@ -130,7 +132,7 @@ background-color: blue;
 .suggestionsList {
   max-height: 300px;
   margin-bottom: 100px;
-  overflow: scroll;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -236,30 +238,54 @@ body.modal-open {
   height: 500px;
 }
 
-.fadez-in{ 
-  animation: fadeInAnimation ease 4s; 
-  animation-iteration-count: 1; 
-  animation-fill-mode: forwards; 
-} 
-@keyframes fadeInAnimation { 
-  0% { 
-      opacity: 0; 
-  } 
-  100% { 
-      opacity: 1; 
-  } 
-} 
+.fadez-in {
+  animation: fadeInAnimation ease 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-.fadez-out{ 
-  animation: fadeOutAnimation ease 5s; 
-  animation-iteration-count: 1; 
-  animation-fill-mode:backwards; 
-} 
-@keyframes fadeOutAnimation { 
-  0% { 
-      opacity: 1; 
-  } 
-  100% { 
-      opacity: 0; 
-  } 
-} 
+.fadez-out {
+  animation: fadeOutAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+}
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.modalHeaderFooter {
+  background: #faf7ed !important;
+}
+
+.modalBodyTitle {
+  background: white !important;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.button-1-14 {
+  height: 100% !important;
+}

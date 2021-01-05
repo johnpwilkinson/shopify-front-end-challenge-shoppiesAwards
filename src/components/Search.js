@@ -3,13 +3,13 @@ import axios from "axios";
 import Suggestions from "./Suggestions";
 import Nominations from "./Nominations";
 import uuid from "react-uuid";
-import { Container, Jumbotron, Form, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import ToastPop from "./Toast";
 import HelpModal from "./HelpModal";
 import { withRouter, Redirect } from "react-router-dom";
-// import { OMDB_URL, OMDB_KEY } from "./utils/urls";
-// import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-import Loading from './Loading'
+import Jumbo from "./Jumbo";
+import { URL } from "./utils";
+import Loading from "./Loading";
 
 class Search extends Component {
   state = {
@@ -27,15 +27,8 @@ class Search extends Component {
     redirect: false,
     goto: "",
     isLoading: true,
-    // showFullToast: [false,
   };
 
-  //   componentDidMount() {
-  //     if (localStorage.getItem("nominations") !== null) {
-  //       const nominations = localStorage.getItem("nominations");
-  //       this.setState({ nominations });
-  //     }
-  //   }
   componentDidMount() {
     setTimeout(() => this.setState({ isLoading: false }), 5000);
     const nominations = localStorage.getItem("nominations");
@@ -44,9 +37,7 @@ class Search extends Component {
 
   getInfo = () => {
     axios
-      .get(
-        `http://www.omdbapi.com/?apikey=977ea3e&type=movie&s=${this.state.query}`
-      )
+      .get(`${URL}&type=movie&s=${this.state.query}`)
       .then((res) => res.data)
       .then((res) => {
         this.setState({
@@ -146,7 +137,7 @@ class Search extends Component {
   getDetails = (id) => {
     // console.log("yes");
     axios
-      .get(`http://www.omdbapi.com/?apikey=977ea3e&i=${id}`)
+      .get(`${URL}&i=${id}`)
       .then((res) => res.data)
       .then((res) => {
         console.log(res.Title);
@@ -199,61 +190,24 @@ class Search extends Component {
       goto: url,
       redirect: true,
     });
-    // this.renderRedirect(payload)
   };
 
-  // renderRedirect = () => {
-  //   return <Redirect to={this.state.goto}/>
-  // }
   render() {
     if (this.state.redirect === true) {
       return <Redirect to={this.state.goto} />;
     }
     if (this.state.isLoading) {
-      return (
-        <Loading className="reel"/>
-      );
+      return <Loading className="reel" />;
     }
     return (
-      <Container fluid className="fadez-in" >
+      <Container fluid className="fadez-in">
         <Row>
-          <Container fluid >
-            <Jumbotron>
-              <Row className="d-flex justify-content-between">
-                <Col>
-                  <div className="logo-font">
-                    <h1 className="shopifyFont">Nominate a movie</h1>
-                  </div>
-                </Col>
-                <Col className="align-self-end">
-                  <div
-                    className="help-font ml-auto text-right"
-                    onClick={this.toggleHelp}
-                  >
-                    <div id="help">Help</div>
-                  </div>
-                </Col>
-              </Row>
-              <Form>
-                <Form.Group>
-                  <Form.Control
-                    placeholder="Find your favorite movie..."
-                    onChange={this.handleInputChange}
-                  />
-                </Form.Group>
-              </Form>
-              <Row className="d-flex justify-content-between">
-                <Col></Col>
-                <Col className="align-self-end">
-                  <div
-                    className="help-font ml-auto text-right"
-                    onClick={this.toggleSave}
-                  >
-                    <div id="help">Save Your Nominations</div>
-                  </div>
-                </Col>
-              </Row>
-            </Jumbotron>
+          <Container fluid>
+            <Jumbo
+              toggleHelp={this.toggleHelp}
+              handleInputChange={this.handleInputChange}
+              toggleSave={this.toggleSave}
+            />
           </Container>
         </Row>
         <Row
