@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  ListGroup,
-  Row,
-  Col,
-  Button,
-  Table,
-  Image,
-} from "react-bootstrap";
+import { Navbar, ListGroup, Row, Col, Table, Image } from "react-bootstrap";
 import axios from "axios";
 import DetailRow from "./DetailRow";
 import Share from "./Share";
@@ -15,8 +7,8 @@ import {
   NotificationContainer,
   NotificationManager,
 } from "react-notifications";
-import 'react-notifications/lib/notifications.css';
-
+import "react-notifications/lib/notifications.css";
+import { Helmet } from "react-helmet";
 
 class MyNoms extends Component {
   state = {
@@ -37,7 +29,7 @@ class MyNoms extends Component {
   }
 
   createNotfication = () => {
-    NotificationManager.success("URL Copied", "SUCCESS",3000,true);
+    NotificationManager.success("URL Copied", "SUCCESS", 3000, true);
   };
 
   handleCopy = () => {
@@ -83,139 +75,136 @@ class MyNoms extends Component {
   };
 
   render() {
-    if (this.state.summary.length < 5) {
-      return (
-        <div>
-          <ListGroup className="suggestionsList status listy">
-            <Row className="detail light-color-bg">
+    const name =
+      this.state.name.charAt(0).toUpperCase() + this.state.name.slice(1);
+    return (
+      <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>{name}'s Shoppiy Nominations</title>
+          <link rel="canonical" href={this.state.url} />
+          <meta property="og:url" content={this.state.url} />
+          <meta property="og:type" content="article" />
+          <meta
+            property="og:title"
+            content="When Great Minds Don’t Think Alike"
+          />
+          <meta
+            property="og:description"
+            content={`${name}'s Shoppiy Nominations`}
+          />
+          <meta
+            property="og:image"
+            content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
+          />
+        </Helmet>
+        <Navbar expand="lg" className="status">
+          <Navbar.Brand className="mx-auto">
+            <Row className="d-flex justify-content-between">
               <Col>
-                <p className="shopifyDetailFont">Loading</p>
+                <div className="shopifyFont dark-color">
+                  {name}'s Nominations
+                </div>
               </Col>
-              <Col sm={3}>
-                <div className="d-flex flex-row-reverse">
-                  <Button>Remove</Button>
+              <Col>
+                <div className="ml-auto text-right">
+                  <Share
+                    handleCopy={this.handleCopy}
+                    url={this.state.url}
+                    title="Check out my Shoppie Nominations"
+                  />
                 </div>
               </Col>
             </Row>
-            <div></div>
-          </ListGroup>
-        </div>
-      );
-    } else {
-      return (
+          </Navbar.Brand>
+        </Navbar>
+        <NotificationContainer />
         <div>
-          <Navbar expand="lg" className="status">
-            <Navbar.Brand className="mx-auto">
-              <Row className="d-flex justify-content-between">
-                <Col>
-                  <div className="shopifyFont dark-color">
-                    {this.state.name.charAt(0).toUpperCase() +
-                      this.state.name.slice(1)}
-                    's Nominations
-                  </div>
+          {this.state.summary.map((movie) => (
+            <ListGroup className="nomList status listy">
+              <Row key={movie.id} className="detail light-color-bg">
+                <Col sm={3} className="icon">
+                  <Image className="nomImage" src={movie.poster} rounded />
                 </Col>
-                <Col>
-                  <div className="ml-auto text-right">
-                    <Share
-                      handleCopy={this.handleCopy}
-                      url={this.state.url}
-                      title="Check out my Shoppie Nominations"
-                    />
-                  </div>
+                <Col sm={9} className="align-self-end">
+                  <Row className="nomDetWrapper">
+                    <Col sm={4}>
+                      <Table size="sm" borderless>
+                        <tbody>
+                          <DetailRow category="Title" value={movie.title} />
+                          <DetailRow category="Year" value={movie.year} />
+                          <DetailRow category="Rated" value={movie.rated} />
+                          <DetailRow category="Genre" value={movie.genre} />
+                          <DetailRow
+                            category="Run Time"
+                            value={movie.runtime}
+                          />
+                          <DetailRow
+                            category="Release Date"
+                            value={movie.released}
+                          />
+                          <DetailRow category="Awards" value={movie.awards} />
+                        </tbody>
+                      </Table>
+                    </Col>
+                    <Col sm={4}>
+                      <Table size="sm" borderless>
+                        <tbody>
+                          <DetailRow
+                            category="Director"
+                            value={movie.director}
+                          />
+                          <DetailRow category="Writer" value={movie.writer} />
+                          <DetailRow category="Actors" value={movie.actors} />
+                          <DetailRow category="Plot" value={movie.plot} />
+                        </tbody>
+                      </Table>
+                    </Col>
+                    <Col sm={4}>
+                      <Table size="sm" borderless>
+                        <tbody>
+                          <DetailRow
+                            category="Meta Score"
+                            value={movie.metascore}
+                          />
+                          <DetailRow
+                            category="IMDB Rating"
+                            value={movie.imdbrating}
+                          />
+                          <DetailRow
+                            category="IMDB Votes"
+                            value={movie.imdbvotes}
+                          />
+                          <DetailRow category="Title" value={movie.title} />
+                          <DetailRow
+                            category="Language"
+                            value={movie.language}
+                          />
+                          <DetailRow category="Country" value={movie.country} />
+                          <DetailRow
+                            category="More"
+                            value={
+                              <a
+                                href={`https://www.imdb.com/title/${movie.imdbid}/`}
+                                target="blank"
+                              >
+                                Click here
+                              </a>
+                            }
+                          />
+                        </tbody>
+                      </Table>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
-            </Navbar.Brand>
-          </Navbar>
-          <NotificationContainer />
-          <div>
-            {this.state.summary.map((movie) => (
-              <ListGroup className="nomList status listy">
-                <Row key={movie.id} className="detail light-color-bg">
-                  <Col sm={3} className="icon">
-                    <Image className="nomImage" src={movie.poster} rounded />
-                  </Col>
-                  <Col sm={9} className="align-self-end">
-                    <Row className="nomDetWrapper">
-                      <Col sm={4}>
-                        <Table size="sm" borderless>
-                          <tbody>
-                            <DetailRow category="Title" value={movie.title} />
-                            <DetailRow category="Year" value={movie.year} />
-                            <DetailRow category="Rated" value={movie.rated} />
-                            <DetailRow category="Genre" value={movie.genre} />
-                            <DetailRow
-                              category="Run Time"
-                              value={movie.runtime}
-                            />
-                            <DetailRow
-                              category="Release Date"
-                              value={movie.released}
-                            />
-                            <DetailRow category="Awards" value={movie.awards} />
-                          </tbody>
-                        </Table>
-                      </Col>
-                      <Col sm={4}>
-                        <Table size="sm" borderless>
-                          <tbody>
-                            <DetailRow
-                              category="Director"
-                              value={movie.director}
-                            />
-                            <DetailRow category="Writer" value={movie.writer} />
-                            <DetailRow category="Actors" value={movie.actors} />
-                            <DetailRow category="Plot" value={movie.plot} />
-                          </tbody>
-                        </Table>
-                      </Col>
-                      <Col sm={4}>
-                        <Table size="sm" borderless>
-                          <tbody>
-                            <DetailRow
-                              category="Meta Score"
-                              value={movie.metascore}
-                            />
-                            <DetailRow
-                              category="IMDB Rating"
-                              value={movie.imdbrating}
-                            />
-                            <DetailRow
-                              category="IMDB Votes"
-                              value={movie.imdbvotes}
-                            />
-                            <DetailRow category="Title" value={movie.title} />
-                            <DetailRow
-                              category="Language"
-                              value={movie.language}
-                            />
-                            <DetailRow
-                              category="Country"
-                              value={movie.country}
-                            />
-                            <DetailRow
-                              category="More"
-                              value={
-                                <a
-                                  href={`https://www.imdb.com/title/${movie.imdbid}/`}
-                                  target="blank"
-                                >
-                                  Click here
-                                </a>
-                              }
-                            />
-                          </tbody>
-                        </Table>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-                <div></div>
-              </ListGroup>
-            ))}
-          </div>
+              <div></div>
+            </ListGroup>
+          ))}
         </div>
-      );
-    }
+      </div>
+    );
   }
 }
+
 export default MyNoms;
