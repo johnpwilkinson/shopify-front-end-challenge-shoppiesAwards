@@ -82,13 +82,10 @@ class MyNoms extends Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>{name}'s Shoppiy Nominations</title>
-          <link rel="canonical" href={this.state.url} />
+          <meta name="description" content={`${name}'s Shoppiy Nominations`} />
           <meta property="og:url" content={this.state.url} />
           <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="When Great Minds Don’t Think Alike"
-          />
+          <meta property="og:title" content={`${name}'s Shoppiy Nominations`} />
           <meta
             property="og:description"
             content={`${name}'s Shoppiy Nominations`}
@@ -97,6 +94,12 @@ class MyNoms extends Component {
             property="og:image"
             content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
           />
+          <meta
+            content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
+            name="twitter:card"
+          />
+          <meta content="@jpw_dev" name="twitter:site" />
+          <meta content="@jpw_dev" name="twitter:creator" />
         </Helmet>
         <Navbar expand="lg" className="status">
           <Navbar.Brand className="mx-auto">
