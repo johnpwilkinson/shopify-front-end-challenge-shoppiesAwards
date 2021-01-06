@@ -13,6 +13,7 @@
     "gsap": "^3.5.1",
     "magic.css": "^1.4.6",
     "node-sass": "4.14.1",
+    "prettylink": "^0.1.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-bootstrap-icons": "^1.1.0",

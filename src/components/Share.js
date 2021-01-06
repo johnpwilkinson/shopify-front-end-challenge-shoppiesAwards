@@ -27,7 +27,7 @@ function Share(props) {
           <i class="far fa-copy fa-stack-1x"></i>
         </div>
       </CopyToClipboard >
-      <TwitterShareButton url={props.url} title={props.title}>
+      <TwitterShareButton url={props.url} title={props.title + ' ' + props.tags} hashtags={props.hashtags}>
         <TwitterIcon size="2.5rem" round={true} />
       </TwitterShareButton>
       <FacebookShareButton url={props.url} title={props.title}>

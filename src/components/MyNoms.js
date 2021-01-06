@@ -9,6 +9,8 @@ import {
 } from "react-notifications";
 import "react-notifications/lib/notifications.css";
 import MetaTags from "react-meta-tags";
+import prettylink from "prettylink";
+
 class MyNoms extends Component {
   state = {
     summary: [],
@@ -24,7 +26,16 @@ class MyNoms extends Component {
     const name = movies.shift();
     movies.map((movie) => this.getDetails(movie));
     let url = window.location.href;
-    this.setState({ name, url });
+    const tinyurl = new prettylink.TinyURL();
+    tinyurl
+      .short(url)
+      .then((result) => {
+        console.log(`Here is your link: ${result}`);
+        this.setState({ name: name, url: result });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   createNotfication = () => {
@@ -75,27 +86,39 @@ class MyNoms extends Component {
 
   render() {
     const name =
-      this.state.name.charAt(0).toUpperCase() + this.state.name.slice(1);
+      this.state.name.slice(-1) === "s"
+        ? this.state.name.charAt(0).toUpperCase() +
+          this.state.name.slice(1) +
+          "'"
+        : this.state.name.charAt(0).toUpperCase() +
+          this.state.name.slice(1) +
+          "'s";
 
     return (
       <div>
         <MetaTags>
-          <title>{`${name}'s Shoppiy Nominations`}</title>
+          <title>{`${name} Shoppiy Nominations`}</title>
         </MetaTags>
         <Navbar expand="lg" className="status">
           <Navbar.Brand className="mx-auto">
             <Row className="d-flex justify-content-between">
               <Col>
-                <div className="shopifyFont dark-color">
-                  {name}'s Nominations
-                </div>
+                <div className="shopifyFont dark-color">{name} Nominations</div>
               </Col>
               <Col>
                 <div className="ml-auto text-right">
                   <Share
                     handleCopy={this.handleCopy}
                     url={this.state.url}
-                    title="Check out my Shoppie Nominations"
+                    title={`Check out ${name} Shoppie Nominations`}
+                    tags="@ShopifyDevs @pshevsky @ShopifyEng @ShopifyData @shopify_dev @BritShopify @tobi"
+                    hashtags={[
+                      "Shopify",
+                      "ShopifyFrontEndInternship2021",
+                      "ShopifyInternship",
+                      "ShoppieAwards",
+                      "Shoppies",
+                    ]}
                   />
                 </div>
               </Col>
