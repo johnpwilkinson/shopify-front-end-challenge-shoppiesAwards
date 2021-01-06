@@ -81,47 +81,6 @@ class MyNoms extends Component {
       <div>
         <MetaTags>
           <title>{`${name}'s Shoppiy Nominations`}</title>
-
-          <meta
-            name="description"
-            content="Check out MY nominations for the 2021 Shoppie awards!"
-          />
-
-          <meta itemprop="name" content="Shoppies" />
-          <meta
-            itemprop="description"
-            content="Check out MY nominations for the 2021 Shoppie awards!"
-          />
-          <meta
-            itemprop="image"
-            content="https://p7.hiclipart.com/preview/193/871/810/5bbc125f0716a.jpg"
-          />
-
-          <meta
-            property="og:url"
-            content="http://shopify-shoppies-2020.herokuapp.com"
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content="Shoppies" />
-          <meta
-            property="og:description"
-            content="Check out MY nominations for the 2021 Shoppie awards!"
-          />
-          <meta
-            property="og:image"
-            content="https://p7.hiclipart.com/preview/193/871/810/5bbc125f0716a.jpg"
-          />
-
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Shoppies" />
-          <meta
-            name="twitter:description"
-            content="Check out MY nominations for the 2021 Shoppie awards!"
-          />
-          <meta
-            name="twitter:image"
-            content="https://p7.hiclipart.com/preview/193/871/810/5bbc125f0716a.jpg"
-          />
         </MetaTags>
         <Navbar expand="lg" className="status">
           <Navbar.Brand className="mx-auto">
