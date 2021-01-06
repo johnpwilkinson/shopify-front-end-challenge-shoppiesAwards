@@ -81,23 +81,48 @@ class MyNoms extends Component {
     return (
       <div>
         <Helmet>
+          <title>{`${name}'s Shoppiy Nominations`}</title>
+
           <meta
-            property="og:title"
-            content="European Travel Destinations"
-          ></meta>
+            name="description"
+            content="Check out MY nominations for the 2021 Shoppie awards!"
+          />
+
+          <meta itemprop="name" content="Shoppies" />
           <meta
-            property="og:description"
-            content={`${name}'s Shoppiy Nominations`}
-          ></meta>
+            itemprop="description"
+            content="Check out MY nominations for the 2021 Shoppie awards!"
+          />
           <meta
-            property="og:image"
-            content="http://euro-travel-example.com/thumbnail.jpg"
-          ></meta>
+            itemprop="image"
+            content="https://p7.hiclipart.com/preview/193/871/810/5bbc125f0716a.jpg"
+          />
+
           <meta
             property="og:url"
-            content="http://euro-travel-example.com/index.htm"
-          ></meta>
-          <meta name="twitter:card" content="summary"></meta>
+            content="http://shopify-shoppies-2020.herokuapp.com"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Shoppies" />
+          <meta
+            property="og:description"
+            content="Check out MY nominations for the 2021 Shoppie awards!"
+          />
+          <meta
+            property="og:image"
+            content="https://p7.hiclipart.com/preview/193/871/810/5bbc125f0716a.jpg"
+          />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Shoppies" />
+          <meta
+            name="twitter:description"
+            content="Check out MY nominations for the 2021 Shoppie awards!"
+          />
+          <meta
+            name="twitter:image"
+            content="https://p7.hiclipart.com/preview/193/871/810/5bbc125f0716a.jpg"
+          />
         </Helmet>
         <Navbar expand="lg" className="status">
           <Navbar.Brand className="mx-auto">
