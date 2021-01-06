@@ -8,8 +8,7 @@ import {
   NotificationManager,
 } from "react-notifications";
 import "react-notifications/lib/notifications.css";
-import { Helmet } from "react-helmet";
-
+import MetaTags from "react-meta-tags";
 class MyNoms extends Component {
   state = {
     summary: [],
@@ -80,7 +79,7 @@ class MyNoms extends Component {
 
     return (
       <div>
-        <Helmet>
+        <MetaTags>
           <title>{`${name}'s Shoppiy Nominations`}</title>
 
           <meta
@@ -123,7 +122,7 @@ class MyNoms extends Component {
             name="twitter:image"
             content="https://p7.hiclipart.com/preview/193/871/810/5bbc125f0716a.jpg"
           />
-        </Helmet>
+        </MetaTags>
         <Navbar expand="lg" className="status">
           <Navbar.Brand className="mx-auto">
             <Row className="d-flex justify-content-between">
