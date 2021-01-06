@@ -77,29 +77,24 @@ class MyNoms extends Component {
   render() {
     const name =
       this.state.name.charAt(0).toUpperCase() + this.state.name.slice(1);
+
     return (
       <div>
         <Helmet>
-          <meta charSet="utf-8" />
-          <title>{name}'s Shoppiy Nominations</title>
-          <meta name="description" content={`${name}'s Shoppiy Nominations`} />
-          <meta property="og:url" content={this.state.url} />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content={`${name}'s Shoppiy Nominations`} />
+          <meta property="og:title" content="European Travel Destinations" />
           <meta
             property="og:description"
             content={`${name}'s Shoppiy Nominations`}
           />
           <meta
             property="og:image"
-            content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
+            content="http://euro-travel-example.com/thumbnail.jpg"
           />
           <meta
-            content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg"
-            name="twitter:card"
+            property="og:url"
+            content="http://euro-travel-example.com/index.htm"
           />
-          <meta content="@jpw_dev" name="twitter:site" />
-          <meta content="@jpw_dev" name="twitter:creator" />
+          <meta name="twitter:card" content="summary_large_image" />
         </Helmet>
         <Navbar expand="lg" className="status">
           <Navbar.Brand className="mx-auto">
