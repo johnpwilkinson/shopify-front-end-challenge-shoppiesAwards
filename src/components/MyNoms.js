@@ -81,20 +81,23 @@ class MyNoms extends Component {
     return (
       <div>
         <Helmet>
-          <meta property="og:title" content="European Travel Destinations" />
+          <meta
+            property="og:title"
+            content="European Travel Destinations"
+          ></meta>
           <meta
             property="og:description"
             content={`${name}'s Shoppiy Nominations`}
-          />
+          ></meta>
           <meta
             property="og:image"
             content="http://euro-travel-example.com/thumbnail.jpg"
-          />
+          ></meta>
           <meta
             property="og:url"
             content="http://euro-travel-example.com/index.htm"
-          />
-          <meta name="twitter:card" content="summary_large_image" />
+          ></meta>
+          <meta name="twitter:card" content="summary"></meta>
         </Helmet>
         <Navbar expand="lg" className="status">
           <Navbar.Brand className="mx-auto">
