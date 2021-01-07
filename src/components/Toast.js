@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 
-import { Toast, Button, InputGroup, FormControl } from "react-bootstrap";
+import {
+  Toast,
+  Button,
+  InputGroup,
+  FormControl,
+  Overlay,
+  Tooltip,
+} from "react-bootstrap";
 
 function ToastPop(props) {
+  const target = useRef(null);
+
   return (
     <Toast
       aria-live="polite"
@@ -28,8 +37,18 @@ function ToastPop(props) {
       <Toast.Body className="mx-auto toastText">
         <div className="text-center">
           <span className="toastText">{props.message}</span>
+          <div
+            className={
+              props.shareNsave !== "" && !props.saveToast
+                ? "help-font ml-auto text-right pointer"
+                : "help-font ml-auto text-right pointer hideMe"
+            }
+            onClick={props.toggleSave}
+          >
+            <div id="help" className="text-center"><span className="toastText">Save Your Nominations</span></div>
+          </div>
         </div>
-        {props.saveToast ? (
+        {props.saveToast && props.shareNsave === undefined ? (
           <div>
             <InputGroup className="mb-3">
               <FormControl
@@ -40,9 +59,29 @@ function ToastPop(props) {
                 onChange={props.handleInputChange}
               />
               <InputGroup.Append>
-                <Button onClick={props.saveNoms} variant="outline-secondary">
+                <Button
+                  ref={target}
+                  onClick={props.saveNoms}
+                  variant="outline-secondary"
+                >
                   Save
                 </Button>
+                <Overlay
+                  target={target.current}
+                  show={props.showTip}
+                  placement="right"
+                  id="tip"
+                >
+                  {(props) => (
+                    <Tooltip
+                      id="overlay-example"
+                      className="my-tool-tip"
+                      {...props}
+                    >
+                      Please Enter Your Name
+                    </Tooltip>
+                  )}
+                </Overlay>
               </InputGroup.Append>
             </InputGroup>
           </div>

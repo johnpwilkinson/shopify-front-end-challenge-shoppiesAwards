@@ -31,7 +31,7 @@ function Jumbo(props) {
         <Col></Col>
         <Col className="align-self-end">
           <div
-            className="help-font ml-auto text-right pointer"
+            className={props.nominations.length === 5 ? "help-font ml-auto text-right pointer" : "help-font ml-auto text-right pointer hideMe"}
             onClick={props.toggleSave}
           >
             <div id="help">Save Your Nominations</div>

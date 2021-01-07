@@ -27,6 +27,7 @@ class Search extends Component {
     redirect: false,
     goto: "",
     isLoading: true,
+    showTip: false,
   };
 
   componentDidMount() {
@@ -87,6 +88,7 @@ class Search extends Component {
           true,
           "🚨 Oh, No 🚨",
           "There are SO MANY great movies, but please only nominate five",
+          ""
         ],
       });
     }
@@ -96,6 +98,7 @@ class Search extends Component {
           true,
           "🏆 Congratulations 🏆",
           "✅ You chose 5️⃣ fantastic films!",
+          "Click Here to Save & Share",
         ],
       });
     }
@@ -178,18 +181,25 @@ class Search extends Component {
     }
   };
   saveNoms = (event) => {
-    event.preventDefault();
-    let name = this.state.name;
-    let noms = [...this.state.nominations];
-    let nomImdbIds = "";
-    noms.map((noms) => (nomImdbIds += noms.imdbid + ","));
-    let payload = name + "," + nomImdbIds.slice(0, -1);
-    let url = `/summary?query=${payload}`;
-    this.setState({
-      nominationIMDBIDs: payload,
-      goto: url,
-      redirect: true,
-    });
+    if (event.target.parentElement.previousSibling.value.length > 0) {
+      event.preventDefault();
+      let name = this.state.name;
+      let noms = [...this.state.nominations];
+      let nomImdbIds = "";
+      noms.map((noms) => (nomImdbIds += noms.imdbid + ","));
+      let payload = name + "," + nomImdbIds.slice(0, -1);
+      let url = `/summary?query=${payload}`;
+      this.setState({
+        nominationIMDBIDs: payload,
+        goto: url,
+        redirect: true,
+      });
+    } else {
+      this.setState({
+        showTip: true,
+      });
+      setTimeout(() => this.setState({ showTip: false }), 2000);
+    }
   };
 
   render() {
@@ -207,6 +217,7 @@ class Search extends Component {
               toggleHelp={this.toggleHelp}
               handleInputChange={this.handleInputChange}
               toggleSave={this.toggleSave}
+              nominations={this.state.nominations}
             />
           </Container>
         </Row>
@@ -230,11 +241,16 @@ class Search extends Component {
             show={this.state.showToast[0]}
             top={this.state.showToast[1]}
             message={this.state.showToast[2]}
+            shareNsave={this.state.showToast[3]}
             closeToast={this.closeToast}
             saveToast={this.state.saveToast}
             saveNoms={this.saveNoms}
             noms={this.state.nominationIMDBIDs}
             handleInputChange={this.handleInputChange}
+            showTip={this.state.showTip}
+            nominations={this.state.nominations}
+            toggleSave={this.toggleSave}
+
           />
           <Col>
             <Nominations

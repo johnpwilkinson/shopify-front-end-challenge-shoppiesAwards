@@ -30,10 +30,10 @@ function Share(props) {
       <TwitterShareButton url={props.url} title={props.title + ' ' + props.tags} hashtags={props.hashtags}>
         <TwitterIcon size="2.5rem" round={true} />
       </TwitterShareButton>
-      <FacebookShareButton url={props.url} title={props.title}>
+      <FacebookShareButton url={props.url} quote={props.title} hashtag={"#Shopify #ShopifyFrontEndInternship2021 #ShopifyInternship #ShoppieAwardsShoppies"}>
         <FacebookIcon size="2.5rem" round={true} />
       </FacebookShareButton>
-      <EmailShareButton url={props.url} title={props.title}>
+      <EmailShareButton url={props.url} subject={props.title} body={props.title}>
         <EmailIcon size="2.5rem" round={true} />
       </EmailShareButton>
       <LinkedinShareButton url={props.url} title={props.title} summary={props.title + ' ' + props.tags} source={props.url}>

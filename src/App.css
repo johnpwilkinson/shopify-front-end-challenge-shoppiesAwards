@@ -83,7 +83,30 @@ background-color: blue;
 .dark-color {
   color: #024c3e;
 }
+/* #overlay-example {
+  background-color: #024c3e;
+  color:  #024c3e; 
+  font-family: myriad-pro-italic;
 
+} */
+#overlay-example > .tooltip-inner {
+  font-family: myriad-pro-italic;
+  background-color: #024c3e;
+}
+.hideMe {
+  visibility: hidden;
+}
+.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
+  right: 0;
+  border-width: .4rem .4rem .4rem 0;
+  border-right-color: #024c3e !important;
+}
+.tooltip .arrow::before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
 .jumbotron {
   background-color: #faf7ed !important;
 }
@@ -108,7 +131,6 @@ background-color: blue;
   color: #faf7ed;
   font-weight: bold;
   text-decoration: none !important;
-
 }
 .help-font {
   font-family: myriad-pro-italic;
