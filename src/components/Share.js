@@ -36,7 +36,7 @@ function Share(props) {
       <EmailShareButton url={props.url} title={props.title}>
         <EmailIcon size="2.5rem" round={true} />
       </EmailShareButton>
-      <LinkedinShareButton url={props.url} title={props.title} >
+      <LinkedinShareButton url={props.url} title={props.title} summary={props.title + ' ' + props.tags} source={props.url}>
         <LinkedinIcon size="2.5rem" round={true} />
       </LinkedinShareButton>
       <PinterestShareButton url={props.url} title={props.title}>
