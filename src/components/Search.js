@@ -10,7 +10,6 @@ import { withRouter, Redirect } from "react-router-dom";
 import Jumbo from "./Jumbo";
 import { URL } from "./utils";
 import Loading from "./Loading";
-import prettylink from "prettylink";
 
 class Search extends Component {
   state = {
