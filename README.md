@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Welcome to the Shoppie Awards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You have found the official Shopify Shoppie Awards nominations app. 
+![appAnimation](https://lh3.googleusercontent.com/7z7dWTW7XsbslBcdn61GqRZb-L6jIeEFv8uysgu10IxWMN6_G26B5Quj6MINmh0LZpRkEuBmor9UbgGhUrQcEXiWN7_4IzBL8naJOvsJ-clYhUXJh3ixOO-IY66SVk3F3g6hwVMIVqp2qjwlQLQqN7HNrNNQHOhNJR9Z_3C5ik6eVGSblpHKBckydkinyqc8B5PZ1Y2KBJDuDcrbTNoW5YufC1Lli7AwejIjc4xRyOl-WiDaB3Y-lsOOdwLD56LmA4ekFoT5F1EZZXaMiv_6fdINCJYbi79WezKxu8HtYePaBYyNQRAdzUGO3q10i2s0rEP0gA9BDF3X62wfNbbi1EZalBtdHJL4MaKhCA7IbcghPzJjye0_vyFWp2MVF7clJaBX7KbBzlMWWnyjyoIhZuUBPcjjcwFSoI9JjKzdIeVPjPF7TxZVZ8Q4kPrCbVwvstqTnalb51gkLbAmZpCZsbxk5cWVpHhzw2znD7FEcCzAdhdkdBmTQOB-w-31V0cfzaoDLfwtmXWvyW9OGyIL0ZTRoBD0wjX-jYCLrEvO4Q5BzAlqAi8dM93JseV-D2eC9L0qv7xocuzqIV6FuRNpTTMsYtf_MdKrfmDJfO5-XVO9GhqZfvKu3SPVA-I9yWUV-c8aeIoJWDGOcUP14i8BXOzWRGOIgpad2E91xAA48PRh2v-EVJdTedU3LRMx=w600-h375-no?authuser=0)
 
-## Available Scripts
+# How to Use 
+![Shoppie Search Bar](https://lh3.googleusercontent.com/UZNeKHLsSfN_001oKp_Jb9_utKxCE0l1uEmg0vorXAntBoGF0CtqYNkWgsGRmYxOva9Ognd1--rEh35jp-RnS2RhmO5sw-4Kr6l0VnZTpI2fmnu7u3Rxbp_OHUYD4eEHbHRXor25p-93anc_tjyLkuPvq5WWNt8Tobev2brPaSW2pazqZZqA57u2SIUHGixr507xauPEodD8NELyvvprQYB6r8AnpeAro16IG9dLtVyvHPf3br6P70tL7cKg-Gh2y3I-B_1drB5EYo7Zh_zc6nkrMFCbsgDwKx3PDD8rQreQSSH8fIUKbz2oieByr2WjmjIKSQajaAgWo2-Mtz0g_LPCV_VLsfGJRDRmegpk2uzqS55gv_Je1WXx1l5keFwRCwdWhCwxHk2-i9UJnT7KKCt_K6gID63wEfHK9iqUmuomKw1fbUppsBcxt6ZJcQ3VOT9izTCiHSVSe-Y_ZNfhq8M06Kswgz7GuHZQVD6xfV7OO-RrmpmhIo4zZLV71ERhWICFi4ZYYReGzSTHYiLKFZI5Yg5cd6-KmfLJ5j1Xb4vjacpr-hi4fWBedVCKwPa_gCuFuxF-61uTwEwfelIRhpqKoeoJu_bt5wIGslE-gU8NiALV9Pn5aThbMtvZ72AZS1me8ygHF-IgGOQcIL5f88TAQF451-K8pAweJSyZJGZNumYTbT0u0aJCzcB3=w2174-h640-no?authuser=0)
 
-In the project directory, you can run:
+🎬 Use the search box to find FIVE movies to nominate for a SHOPPIE award
 
-### `yarn start`
+✅ Click the NOMINATE button to add a movie to your nominations list
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+❎ Click the REMOVE button to remove a movie to your nominations list
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+💾 Click SAVE YOUR NOMINATIONS to generate a shareable link to your nominations
 
-### `yarn test`
+![Suggestions and Nominations](https://lh3.googleusercontent.com/gzSKFXjBjSbswYt9IcpFIGXM1UkLCjgCkvnuOHxX3Il-jIrepHbj5jTIpiz-s-tip6aaHM8RcaDosuhOPabr378XORWhXbbNFPijbFO39cvRtU4wpfRSOBOCEg4LRx1rj74RgVz3zfS4Gjfu3fDZllIad3P_yuG1H3d0JzuwW3uoAd_1HJ_xBSM41Q5wLrsGAhXAT9nReyIKxPiNGCj7w6UjrJUhQn9iQSVIOR9B-tnew1eAE36mBdFCiiBnoMi2tSPk9V37a8dnnn6uNP9wq2jw7__UxxFF43BbDckKRMmjaEAo4R2iKGlkhjlkXyDBYWzy54zGhuFS5fOYhD8w8V6O6i5Dw-bZJJXx4FRKAllWMtfLyirYHEaF59tUQBzvY2jMPb8wLBJ6AGaqa2MFcQbbVUtm3raEAMMCyresAOYv2M9US4PIqoS7RHSte_RB19EFYOoU13LTeEoQwwVzkmh4a5Vl-yM6QEttwvxvnrCgE5OVvpWsG2b4MMyjkyaV6ogwfMvRtGUzm84SYo4KB51vg5X3-VoaOZht7Ilx_4ZYuRuDdpDIniMNzK7W4d2EEm7fMeOH57yV2mOWeO-BQ5Aqf7WbbSzizg0XRBpjxPERq8O6pJsBc_wR2zHnRkek-0pB0qRr1HLoXAvROuJPX-wlN32oUIpDE9quffxdeGUEjL4G290bPm0X94x6=w2180-h654-no?authuser=0)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## After you make your selections
 
-### `yarn build`
+You selections are saved. You can navigate away from the Shoppie app and when you come back your selections will be preserved. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Click  SAVE YOUR NOMINATIONS to generate a unique link that you can share with your friends via eMail, URL, or popular social media platforms. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Architecture of the APP
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This app is made with React.js. Feel free to fork / clone the repo and spin up locally. The component library React-Bootstrap is used for styling. There are several packages use for more advanced functionality like animations, social-media sharing, and copy/paste. All of these dependencies should be installed when you install my code-base. 
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
