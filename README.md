@@ -1,6 +1,10 @@
 # Welcome to the Shoppie Awards
 
 You have found the official Shopify Shoppie Awards nominations app. 
+
+[Click here to go to the Official Shoppie App](http://shopify-shoppies-2020.herokuapp.com/)
+
+
 ![appAnimation](https://lh3.googleusercontent.com/7z7dWTW7XsbslBcdn61GqRZb-L6jIeEFv8uysgu10IxWMN6_G26B5Quj6MINmh0LZpRkEuBmor9UbgGhUrQcEXiWN7_4IzBL8naJOvsJ-clYhUXJh3ixOO-IY66SVk3F3g6hwVMIVqp2qjwlQLQqN7HNrNNQHOhNJR9Z_3C5ik6eVGSblpHKBckydkinyqc8B5PZ1Y2KBJDuDcrbTNoW5YufC1Lli7AwejIjc4xRyOl-WiDaB3Y-lsOOdwLD56LmA4ekFoT5F1EZZXaMiv_6fdINCJYbi79WezKxu8HtYePaBYyNQRAdzUGO3q10i2s0rEP0gA9BDF3X62wfNbbi1EZalBtdHJL4MaKhCA7IbcghPzJjye0_vyFWp2MVF7clJaBX7KbBzlMWWnyjyoIhZuUBPcjjcwFSoI9JjKzdIeVPjPF7TxZVZ8Q4kPrCbVwvstqTnalb51gkLbAmZpCZsbxk5cWVpHhzw2znD7FEcCzAdhdkdBmTQOB-w-31V0cfzaoDLfwtmXWvyW9OGyIL0ZTRoBD0wjX-jYCLrEvO4Q5BzAlqAi8dM93JseV-D2eC9L0qv7xocuzqIV6FuRNpTTMsYtf_MdKrfmDJfO5-XVO9GhqZfvKu3SPVA-I9yWUV-c8aeIoJWDGOcUP14i8BXOzWRGOIgpad2E91xAA48PRh2v-EVJdTedU3LRMx=w600-h375-no?authuser=0)
 
 # How to Use 
