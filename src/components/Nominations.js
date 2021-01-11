@@ -9,7 +9,6 @@ function Nominations(props) {
           <span className="shopifyFont dark-color">Nominations</span>
         </Navbar.Brand>
       </Navbar>
-
       <div>
         {props.nominations.length > 0 ? (
           props.nominations.map((movie) => (
