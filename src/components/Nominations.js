@@ -9,6 +9,7 @@ function Nominations(props) {
           <span className="shopifyFont dark-color">Nominations</span>
         </Navbar.Brand>
       </Navbar>
+
       <div>
         {props.nominations.length > 0 ? (
           props.nominations.map((movie) => (
@@ -27,8 +28,7 @@ function Nominations(props) {
                       movie={movie.id}
                       action={props.delNomination}
                       content={"Remove"}
-                    >
-                    </AwesomeButton>
+                    ></AwesomeButton>
                   </div>
                 </Col>
               </Row>
