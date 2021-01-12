@@ -15,7 +15,7 @@ function Nominations(props) {
           props.nominations.map((movie) => (
             <ListGroup className="suggestionsList status listy">
               <Row key={movie.id} className="detail light-color-bg">
-                <Col>
+                <Col sm={9}>
                   {console.log(movie)}
                   <p className="shopifyDetailFont">
                     {movie.title} - {movie.year}{" "}
