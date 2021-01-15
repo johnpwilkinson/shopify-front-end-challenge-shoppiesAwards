@@ -226,7 +226,7 @@ class Search extends Component {
             zIndex: 0,
           }}
         >
-          <Col>
+          <Col className=" mobileCol col-12 col-md-6 style">
             <Suggestions
               results={this.state.results}
               nominate={this.addNomination}
@@ -252,7 +252,7 @@ class Search extends Component {
             toggleSave={this.toggleSave}
 
           />
-          <Col>
+          <Col className="col-12 col-md-6 style">
             <Nominations
               nominations={this.state.nominations}
               delNomination={this.delNomination}

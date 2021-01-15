@@ -311,3 +311,9 @@ a:hover {
 .button-1-14 {
   height: 100% !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .mobileCol {
+   margin-bottom: 5%;
+  }
+}
