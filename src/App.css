@@ -96,9 +96,10 @@ background-color: blue;
 .hideMe {
   visibility: hidden;
 }
-.bs-tooltip-auto[x-placement^=right] .arrow::before, .bs-tooltip-right .arrow::before {
+.bs-tooltip-auto[x-placement^="right"] .arrow::before,
+.bs-tooltip-right .arrow::before {
   right: 0;
-  border-width: .4rem .4rem .4rem 0;
+  border-width: 0.4rem 0.4rem 0.4rem 0;
   border-right-color: #024c3e !important;
 }
 .tooltip .arrow::before {
@@ -314,6 +315,11 @@ a:hover {
 
 @media only screen and (max-width: 600px) {
   .mobileCol {
-   margin-bottom: 5%;
+    margin-bottom: 5%;
+  }
+  .mobileMovieButton {
+    width: 100% !important;
+    display: block !important;
+    margin-bottom: 5%;
   }
 }

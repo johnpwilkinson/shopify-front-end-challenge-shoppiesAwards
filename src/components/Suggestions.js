@@ -18,7 +18,7 @@ function Suggestions(props) {
         {(props.results || []).map((movie, index) => (
           <ListGroup className="suggestionsList status listy">
             <Row key={index} className="detail light-color-bg">
-              <Col>
+              <Col className="col-12 col-md-6 style">
                 {/* {console.log(movie.imdbID)} */}
                 <p className="shopifyDetailFont">
                   {movie.Title} - {movie.Year}{" "}
@@ -32,10 +32,11 @@ function Suggestions(props) {
                   </span>
                 </p>
               </Col>
-              <Col sm={3}>
+              <Col className="col-12 col-md-6 style">
                 {noms.indexOf(movie.imdbID) > -1 ? (
-                  <div className="d-flex flex-row-reverse shopifyDetailFont">
+                  <div className="d-flex flex-row-reverse shopifyDetailFont mobileMovieButton">
                     <AwesomeButton
+                      
                       color={"red"}
                       isDisabled={true}
                       content={"Nominate"}
